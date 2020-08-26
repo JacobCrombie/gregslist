@@ -13,13 +13,36 @@
 <body>
     <header class="container-fluid bg-primary">
         <div class="row m-3">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
             <div class="col text-center text-light text-shadow">
                 <h1>Gregslist</h1>
             </div>
         </div>
     </header>
     <main class="container" id="main">
-        <div class="row my-3">
+
+        <div class="row my-3" id="form">
             <div class="col">
                 <form onsubmit="app.carsController.createCar()" class="form-inline">
                     <div class="form-group p-1">
@@ -48,7 +71,7 @@
                         <label class="mr-1" for="img">Image Url</label>
                         <input type="url" name="img" id="img" class="form-control" placeholder="Image Url...">
                     </div>
-                    <button type="submit" class="btn btn-outline-success">Add Car</button>
+                    <button type="submit" class="btn btn-outline-success">List Home</button>
                 </form>
             </div>
         </div>
@@ -68,10 +91,82 @@
                 </div>
             </div> -->
         </div>
-        <div class="row" id="houses">
-            
+
+        <div class="row my-3">
+            <div class="col" id="houseForm">
+                <form onsubmit="app.housesController.createHouse()" class="form-inline">
+                    <div class="form-group p-1">
+                        <label class="mr-1" for="builder">Builder</label>
+                        <input type="text" name="builder" id="builder" class="form-control" placeholder="Builder...">
+                    </div>
+                    <div class="form-group p-1">
+                        <label class="mr-1" for="model">Model</label>
+                        <input type="text" name="model" id="model" class="form-control" placeholder="Model...">
+                    </div>
+                    <div class="form-group p-1">
+                        <label class="mr-1" for="yearBuilt">Year Built</label>
+                        <input type="number" name="yearBuilt" id="yearBuilt" class="form-control" placeholder="Year Built..." min="1900"
+                            max="2021">
+                    </div>
+                    <div class="form-group p-1">
+                        <label class="mr-1" for="price">Price</label>
+                        <input type="number" name="price" id="price" class="form-control" placeholder="Price...">
+                    </div>
+                    <div class="form-group p-1">
+                        <label class="mr-1" for="description">Description</label>
+                        <input type="text" name="description" id="description" class="form-control"
+                            placeholder="Description...">
+                    </div>
+                    <div class="form-group p-1">
+                        <label class="mr-1" for="img">Image Url</label>
+                        <input type="url" name="img" id="img" class="form-control" placeholder="Image Url...">
+                    </div>
+                    <button type="submit" class="btn btn-outline-success">List Home</button>
+                </form>
+            </div>
         </div>
+        <div class="row" id="houses">
+        </div>
+
+        <div class="row my-3">
+            <div class="col" id="jobForm">
+                <form onsubmit="app.jobController.createJob()" class="form-inline">
+                    <div class="form-group p-1">
+                        <label class="mr-1" for="company">Company</label>
+                        <input type="text" name="company" id="company" class="form-control" placeholder="Company...">
+                    </div>
+                    <div class="form-group p-1">
+                        <label class="mr-1" for="position">Position</label>
+                        <input type="text" name="position" id="position" class="form-control" placeholder="Position...">
+                    </div>
+                    <div class="form-group p-1">
+                        <label class="mr-1" for="dateAvailable">Date Available</label>
+                        <input type="number" name="dateAvailable" id="dateAvailable" class="form-control" placeholder="Date Available..." min="1900"
+                            max="2021">
+                    </div>
+                    <div class="form-group p-1">
+                        <label class="mr-1" for="payrate">Pay Rate</label>
+                        <input type="number" name="payrate" id="payrate" class="form-control" placeholder="Pay Rate...">
+                    </div>
+                    <div class="form-group p-1">
+                        <label class="mr-1" for="description">Description</label>
+                        <input type="text" name="description" id="description" class="form-control"
+                            placeholder="Description...">
+                    </div>
+                    <div class="form-group p-1">
+                        <label class="mr-1" for="img">Image Url</label>
+                        <input type="url" name="img" id="img" class="form-control" placeholder="Image Url...">
+                    </div>
+                    <button type="submit" class="btn btn-outline-success">List Job</button>
+                </form>
+            </div>
+        </div>
+        <div class="row" id="jobs">
+        </div>
+
     </main>
+
+
     <footer class="container-fluid bg-primary">
         <div class="row">
             <div class="col text-center text-light">

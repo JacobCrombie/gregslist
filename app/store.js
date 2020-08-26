@@ -1,5 +1,6 @@
 import Car from "./Models/Car.js";
 import House from "./Models/House.js";
+import Job from "./Models/Job.js";
 console.log(1);
 
 let _state = {
@@ -12,7 +13,12 @@ let _state = {
   houses: [
     new House({ builder: "Janky Homes", model: "Send It", yearBuilt: 1998, price: 39998.63, description: "It'll work, no warranty available. ALL SALES ARE FINAL" }),
     new House({ builder: "2 Many Fancy", model: "Envy", yearBuilt: 2020, price: 9999999.99, description: "Trade ins available 6months after movein date for half the value of the house keep up with your neighbors", img: "//placehold.it/200x200" }),
-    new House({builder: "Average Build", model: "Meh", yearBuilt: 2005, price: 100000.00, description: "It's an average home with average neighbors in average neighborhood"})
+    new House({ builder: "Average Build", model: "Meh", yearBuilt: 2005, price: 100000.00, description: "It's an average home with average neighbors in average neighborhood" })
+  ],
+  jobs: [
+    new Job({company: "Big League Chew", position:"Lead Chewer", dateAvailable: 2000, payrate: 20, description: "Need a strong jaw that can chew 8hrs a day and managed jr chewers"}),
+    new Job({company: "Crushed Ice Inc", position:"Ice Crusher", dateAvailable: 2000, payrate: 18, description: "Need a dedicated individual to crush cubed ice on a wholesale level"}),
+    new Job({company: "Paint Dryers Inc", position:"Drying Supervisor", dateAvailable: 2000, payrate: 36, description: "Seeking a attentive individual to supervise the paint and make sure it drys at the standard rate"})
   ]
 };
 

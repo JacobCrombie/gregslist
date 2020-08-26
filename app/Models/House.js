@@ -21,8 +21,8 @@ export default class House {
             <h4 class="card-title">${this.builder} - ${this.model} - ${this.yearBuilt}</h4>
             <p class="card-text">${this.description}</p>
             <div class="d-flex justify-content-between">
-                <button class="btn btn-outline-danger" onclick="app.carsController.removeCar('${this.id}')">Delete</button>
-                <button class="btn btn-outline-info" onclick="app.carsController.bid('${this.id}')">+ $100</button>
+                <button class="btn btn-outline-danger" onclick="app.housesController.removeHouse('${this.id}')">Delete</button>
+                <button class="btn btn-outline-info" onclick="app.housesController.bid('${this.id}')">+ $1000</button>
                 <p>$${this.price.toFixed(2)}</p>
             </div>
         </div>
