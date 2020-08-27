@@ -3,15 +3,14 @@ import STORE from "../store.js";
 console.log(3)
 // private
 function _drawCars() {
-  console.log(6)
   let cars = STORE.State.cars
   let template = ''
   // NOTE when you have a collection of items, they will need to be added to the template in a loop
   cars.forEach(c => template += c.Template)
-  document.getElementById('cars').innerHTML = template
+  document.getElementById('items').innerHTML = template
 }
 
-function _drawForm(){
+function _drawForm() {
   let template = `
   <div class="col">
   <form onsubmit="app.carsController.createCar()" class="form-inline">
@@ -41,17 +40,18 @@ function _drawForm(){
           <label class="mr-1" for="img">Image Url</label>
           <input type="url" name="img" id="img" class="form-control" placeholder="Image Url...">
       </div>
-      <button type="submit" class="btn btn-outline-success">List Home</button>
+      <button type="submit" class="btn btn-outline-success">List Vehicle</button>
   </form>
 </div>
   `
   document.getElementById('form').innerHTML = template
 }
 
+
 //Public
 export default class CarsController {
   constructor() {
-    console.log(5)
+    _drawForm();
     _drawCars();
   }
 
@@ -86,5 +86,10 @@ export default class CarsController {
   bid(id) {
     carsService.bid(id);
     _drawCars();
+  }
+
+  drawCarsPage() {
+    _drawForm()
+    _drawCars()
   }
 }
