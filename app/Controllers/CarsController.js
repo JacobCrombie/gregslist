@@ -1,7 +1,7 @@
 import carsService from "../Services/CarsService.js";
 import STORE from "../store.js";
-console.log(3)
-// private
+
+// Private
 function _drawCars() {
   let cars = STORE.State.cars
   let template = ''
